@@ -8,6 +8,6 @@ package {'flask':
 
 package {'werkzeug':
   ensure   => '2.1.1',
-  name     => 'flask',
+  name     => 'werkzeug',
   provider => 'pip3'
 }
