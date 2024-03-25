@@ -1,4 +1,12 @@
-#!/usr/bin/env bash
-# Generate an RSA key pair with 4096 bits
-# 4096 the bits to create
-ssh-keygen -b 4096 -N betty -f school
+#configure ssh config
+
+file_line{'Turn off passwd auth':
+path => '/etc/ssh/ssh_config',
+line => 'PasswordAuthentication no'
+}
+
+file_line{'Declare identity file':
+path => '/etc/ssh/ssh_config',
+line => 'IdentityFile ~/.ssh/school'
+
+}
