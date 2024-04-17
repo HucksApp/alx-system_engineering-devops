@@ -32,8 +32,8 @@ frontend  hbnb-frontend
     default_backend hbnb-backend
 backend hbnb-backend
     balance roundrobin
-    server web-01 18.235.233.45:80 check
-    server web-02 100.25.160.122:80 check
+    server web-01 52.207.151.26:80 check
+    server web-02 100.26.216.19:80 check
 " >> /etc/haproxy/haproxy.cfg
 
 sudo service haproxy start
